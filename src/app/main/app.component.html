@@ -1,0 +1,39 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="main-app-header" style="text-align:center">
+  <h1 class="main-app-header">
+    Tweets with pics
+  </h1>
+</div>
+
+<ngb-carousel class="image-carousel" *ngIf="images">
+  <ng-template ngbSlide>
+    <img [src]="images[0]" alt="Random first slide">
+    <div class="carousel-caption">
+      <span>By: Chris Shatrov</span>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img [src]="images[1]" alt="Random second slide">
+    <div class="carousel-caption">
+      <span>By: Chris Shatrov</span>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img [src]="images[2]"  alt="Random third slide">
+    <div class="carousel-caption">
+      <span>By: Chris Shatrov</span>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img [src]="images[3]" alt="Random fourth slide">
+    <div class="carousel-caption">
+      <span>By: Chris Shatrov</span>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<div class="dash-body dashboard-body">
+  <app-dash></app-dash>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,38 @@
+<form [formGroup]="checkboxGroupForm">
+    <span class="dashboard-text">Popular: themes / hashtags:</span>
+    <div class="btn-group btn-group-toggle">
+      <label class="btn-primary" ngbButtonLabel>
+        <input type="checkbox" formControlName="left" ngbButton> Cars
+      </label>
+      <label class="btn-primary" ngbButtonLabel>
+        <input type="checkbox" formControlName="left" ngbButton> Art
+      </label>
+      <label class="btn-primary" ngbButtonLabel>
+        <input type="checkbox" formControlName="left" ngbButton> Travel
+      </label>
+      <label class="btn-primary" ngbButtonLabel>
+        <input type="checkbox" formControlName="left" ngbButton> Travel
+      </label>
+      <label class="btn-primary" ngbButtonLabel>
+        <input type="checkbox" formControlName="left" ngbButton> Nature
+      </label>
+    </div>
+  </form>
+  <hr>
+
+  <span class="dashboard-text">Currently selected hashtags:</span>
+  <button type="button" class="btn btn-outline-secondary mr-2" placement="top" ngbTooltip="Click to delete">
+        Cars
+      </button>
+      <button type="button" class="btn btn-outline-secondary mr-2" placement="top" ngbTooltip="Click to delete">
+        Art
+      </button>
+      <button type="button" class="btn btn-outline-secondary mr-2" placement="top" ngbTooltip="Click to delete">
+        Travel
+    </button>
+    <hr>
+
+    <span class="dashboard-text">Enter hashtag & hit enter: </span>
+    <input id="typeahead-basic" type="text" class="form-control hashtag-input"/>
+    <hr>
+    <!-- <pre>{{checkboxGroupForm.value | json}}</pre> -->

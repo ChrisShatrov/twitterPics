@@ -1,0 +1,66 @@
+.main-app-header {
+  margin-top: 20px;
+  color: white;
+  font-size: 50px;
+  font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+.main-app-header {
+    background-color: #1da1f2; 
+    height: 25%;
+}
+
+.image-carousel {
+    margin: auto;
+    width: 70%;
+    border: 3px solid #1da1f2;
+    padding: 10px;
+    margin-top:25px;
+    margin-bottom: 25px;
+}
+
+
+.image-carousel img {
+    margin: auto;
+    width: 100%;
+    border: 3px solid #1da1f2;
+    padding: 10px;
+}
+
+.carousel-caption {
+    background-color: #1da1f2; 
+    color: white;
+    font-size: 19px;
+    padding: 0;
+}
+
+.dash-body {
+  background-color: rgba(0, 123, 255, 0.18); 
+}
+
+.dashboard-text {
+    margin-left: 20%;
+    font-size: 25px;
+    color: #1da1f2;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    margin-right:15px;
+}
+
+.btn-outline-secondary {
+    color: #1da1f2 !important;
+}
+
+.btn-outline-secondary:hover {
+    color: white !important;
+    background-color: #1da1f2 ;
+}
+
+.hashtag-input {
+    width: 300px;
+    display: inline;
+}
+
+.dashboard-body {
+    height: 1000px;
+    padding-top:10px
+}
