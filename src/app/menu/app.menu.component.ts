@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
@@ -7,15 +7,27 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./../css/app.component.css'],
 })
 export class AppDashboard {
-  public checkboxGroupForm: FormGroup;
+  @Output() followerData = new EventEmitter<object>();
+  @Output() hashtagData = new EventEmitter<object>();
+  public radioGroupFormHashtags: FormGroup;
+  public radioGroupFormFollowers: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit() {
-    this.checkboxGroupForm = this.formBuilder.group({
-      left: true,
-      middle: false,
-      right: false
+    this.radioGroupFormHashtags = this.formBuilder.group({
+      'model': '0'
     });
+    this.radioGroupFormFollowers = this.formBuilder.group({
+      'model': '1000'
+    });
+  }
+
+  optionsFollowersChanged(followerData) {
+    this.followerData.emit(followerData.target.value);
+  }
+
+  optionsHashtagsChanged(hashtagData) {
+    this.hashtagData.emit(hashtagData.target.value);
   }
 }

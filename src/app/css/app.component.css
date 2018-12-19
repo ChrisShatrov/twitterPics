@@ -10,35 +10,35 @@
     height: 25%;
 }
 
-.image-carousel {
-    margin: auto;
-    width: 70%;
+.imageToShow {
+    width: auto;
+    height: 130px;
     border: 3px solid #1da1f2;
-    padding: 10px;
-    margin-top:25px;
-    margin-bottom: 25px;
 }
 
-
-.image-carousel img {
-    margin: auto;
-    width: 100%;
-    border: 3px solid #1da1f2;
-    padding: 10px;
-}
-
-.carousel-caption {
-    background-color: #1da1f2; 
-    color: white;
-    font-size: 19px;
-    padding: 0;
-}
+.box {
+    display: flex;
+    align-items:center;
+ }
 
 .dash-body {
   background-color: rgba(0, 123, 255, 0.18); 
 }
 
 .dashboard-text {
+    margin-left: 32%;
+    font-size: 25px;
+    color: #1da1f2;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    margin-right:15px;
+}
+
+.tweet-text {
+    font-size: 22px;
+    color: black;
+}
+
+.tweet-desc {
     margin-left: 20%;
     font-size: 25px;
     color: #1da1f2;
@@ -55,12 +55,23 @@
     background-color: #1da1f2 ;
 }
 
-.hashtag-input {
-    width: 300px;
-    display: inline;
-}
-
 .dashboard-body {
     height: 1000px;
-    padding-top:10px
+    padding-top:10px;
+}
+
+.mainTweetContainer {
+    background-color: rgba(0, 123, 255, 0.18); 
+    margin-left:300px;
+    margin-right: 300px;
+    border-bottom: 1px solid #1da1f2;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.tweetInfoContainer {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

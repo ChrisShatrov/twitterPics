@@ -1,0 +1,24 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="main-app-header" style="text-align:center">
+  <h1 class="main-app-header">
+    Tweets stats
+  </h1>
+</div>
+
+<div *ngIf="tweets" class="mainTweetContainer">
+    <div class="box" *ngFor="let tweet of tweets | async">
+      <img class="imageToShow" [src]="tweet.tweetImage">
+      <span class="tweetInfoContainer">
+        <div><span class="tweet-desc">Tweet by:</span><span class="tweet-text"> {{tweet.tweetAuthor}}</span></div>
+        <div><span class="tweet-desc">Tweet:</span><span class="tweet-text"> {{tweet.tweetText}}</span></div>
+        <div><span class="tweet-desc">Number of #'s:</span><span class="tweet-text"> {{tweet.numberOfHashtags}}</span></div>
+        <div><span class="tweet-desc">Number of followers:</span><span class="tweet-text"> {{tweet.numberOfFollowers}}</span></div>
+    </span>
+   </div>
+</div>
+
+<div class="dash-body dashboard-body">
+  <app-dash (hashtagData)="optionsHashtagsChanged($event)" (followerData)="optionsFollowersChanged($event)"></app-dash>
+</div>
+
+<router-outlet></router-outlet>

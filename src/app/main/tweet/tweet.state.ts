@@ -22,10 +22,10 @@ export class TweetState {
     }
 
     @Action(AddTweet)
-    add({getState, patchState }: StateContext<TweetStateModel>, { payload }: AddTweet) {
+    add({getState, setState }: StateContext<TweetStateModel>, { payload }: AddTweet) {
         const state = getState();
-        patchState({
-            tweets: [...state.tweets, payload]
+        setState({
+            tweets: [payload]
         });
     }
 }
